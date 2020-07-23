@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BF70958924C82F1D0066C43B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF70958824C82F1D0066C43B /* AppDelegate.m */; };
-		BF70958C24C82F1D0066C43B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF70958B24C82F1D0066C43B /* SceneDelegate.m */; };
 		BF70958F24C82F1D0066C43B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF70958E24C82F1D0066C43B /* ViewController.m */; };
 		BF70959224C82F1D0066C43B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF70959024C82F1D0066C43B /* Main.storyboard */; };
 		BF70959424C82F210066C43B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF70959324C82F210066C43B /* Assets.xcassets */; };
@@ -16,6 +15,8 @@
 		BF70959A24C82F210066C43B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF70959924C82F210066C43B /* main.m */; };
 		BF7095A424C82F210066C43B /* RJDownloadIndicatorDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7095A324C82F210066C43B /* RJDownloadIndicatorDemoTests.m */; };
 		BF7095AF24C82F210066C43B /* RJDownloadIndicatorDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7095AE24C82F210066C43B /* RJDownloadIndicatorDemoUITests.m */; };
+		BF7095BE24C82F5E0066C43B /* RJDownloadIndicatorTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7095BD24C82F5E0066C43B /* RJDownloadIndicatorTestViewController.m */; };
+		BF7095C124C83B2C0066C43B /* RJDownloadIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7095C024C83B2C0066C43B /* RJDownloadIndicator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +40,6 @@
 		BF70958424C82F1D0066C43B /* RJDownloadIndicatorDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RJDownloadIndicatorDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF70958724C82F1D0066C43B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BF70958824C82F1D0066C43B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BF70958A24C82F1D0066C43B /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		BF70958B24C82F1D0066C43B /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		BF70958D24C82F1D0066C43B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		BF70958E24C82F1D0066C43B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BF70959124C82F1D0066C43B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +53,10 @@
 		BF7095AA24C82F210066C43B /* RJDownloadIndicatorDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RJDownloadIndicatorDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7095AE24C82F210066C43B /* RJDownloadIndicatorDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJDownloadIndicatorDemoUITests.m; sourceTree = "<group>"; };
 		BF7095B024C82F210066C43B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF7095BC24C82F5E0066C43B /* RJDownloadIndicatorTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJDownloadIndicatorTestViewController.h; sourceTree = "<group>"; };
+		BF7095BD24C82F5E0066C43B /* RJDownloadIndicatorTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJDownloadIndicatorTestViewController.m; sourceTree = "<group>"; };
+		BF7095BF24C83B2C0066C43B /* RJDownloadIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJDownloadIndicator.h; sourceTree = "<group>"; };
+		BF7095C024C83B2C0066C43B /* RJDownloadIndicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJDownloadIndicator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,10 +107,9 @@
 		BF70958624C82F1D0066C43B /* RJDownloadIndicatorDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BF7095C224C83B310066C43B /* DownloadIndicator */,
 				BF70958724C82F1D0066C43B /* AppDelegate.h */,
 				BF70958824C82F1D0066C43B /* AppDelegate.m */,
-				BF70958A24C82F1D0066C43B /* SceneDelegate.h */,
-				BF70958B24C82F1D0066C43B /* SceneDelegate.m */,
 				BF70958D24C82F1D0066C43B /* ViewController.h */,
 				BF70958E24C82F1D0066C43B /* ViewController.m */,
 				BF70959024C82F1D0066C43B /* Main.storyboard */,
@@ -135,6 +137,17 @@
 				BF7095B024C82F210066C43B /* Info.plist */,
 			);
 			path = RJDownloadIndicatorDemoUITests;
+			sourceTree = "<group>";
+		};
+		BF7095C224C83B310066C43B /* DownloadIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				BF7095BC24C82F5E0066C43B /* RJDownloadIndicatorTestViewController.h */,
+				BF7095BD24C82F5E0066C43B /* RJDownloadIndicatorTestViewController.m */,
+				BF7095BF24C83B2C0066C43B /* RJDownloadIndicator.h */,
+				BF7095C024C83B2C0066C43B /* RJDownloadIndicator.m */,
+			);
+			path = DownloadIndicator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +212,7 @@
 		BF70957C24C82F1D0066C43B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = RJ;
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = RJSoft;
 				TargetAttributes = {
@@ -269,8 +283,9 @@
 			files = (
 				BF70958F24C82F1D0066C43B /* ViewController.m in Sources */,
 				BF70958924C82F1D0066C43B /* AppDelegate.m in Sources */,
+				BF7095C124C83B2C0066C43B /* RJDownloadIndicator.m in Sources */,
+				BF7095BE24C82F5E0066C43B /* RJDownloadIndicatorTestViewController.m in Sources */,
 				BF70959A24C82F210066C43B /* main.m in Sources */,
-				BF70958C24C82F1D0066C43B /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,13 +457,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RJ2G45B9KH;
 				INFOPLIST_FILE = RJDownloadIndicatorDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.RJSoftware.RJDownloadIndicatorDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -459,13 +475,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RJ2G45B9KH;
 				INFOPLIST_FILE = RJDownloadIndicatorDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.RJSoftware.RJDownloadIndicatorDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

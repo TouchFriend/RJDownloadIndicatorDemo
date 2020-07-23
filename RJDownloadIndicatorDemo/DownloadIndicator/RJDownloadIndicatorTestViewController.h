@@ -1,5 +1,5 @@
 //
-//  SceneDelegate.h
+//  RJDownloadIndicatorTestViewController.h
 //  RJDownloadIndicatorDemo
 //
 //  Created by TouchWorld on 2020/7/22.
@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SceneDelegate : UIResponder <UIWindowSceneDelegate>
+NS_ASSUME_NONNULL_BEGIN
 
-@property (strong, nonatomic) UIWindow * window;
+@interface RJDownloadIndicatorTestViewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END
