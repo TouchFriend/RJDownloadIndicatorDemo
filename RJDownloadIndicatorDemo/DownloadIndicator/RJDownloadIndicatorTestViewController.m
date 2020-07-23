@@ -9,7 +9,7 @@
 #import "RJDownloadIndicatorTestViewController.h"
 #import "RJDownloadIndicator.h"
 
-@interface RJDownloadIndicatorTestViewController ()
+@interface RJDownloadIndicatorTestViewController () <RJDownloadIndicatorDelegate>
 /// <#Desription#>
 @property (nonatomic, weak) RJDownloadIndicator *indicator;
 @end
@@ -30,8 +30,18 @@
     indicator.diameterPercent = 1.0;
     indicator.lineWidth = 5.0;
     [indicator changeProgress:0.35 animation:NO];
+    [indicator setClickBlock:^(RJDownloadIndicatorState state) {
+        NSLog(@"点击闭包回调:%ld", state);
+    }];
+    indicator.delegate = self;
 //    indicator.lineWidth = 2.0;
 //    indicator.diameterPercent = 0.3;
+}
+
+#pragma mark - RJDownloadIndicatorDelegate Methods
+
+- (void)indicator:(RJDownloadIndicator *)indicator didClick:(RJDownloadIndicatorState)state {
+    NSLog(@"点击代理回调:%ld", state);
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

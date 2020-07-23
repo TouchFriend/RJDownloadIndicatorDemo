@@ -74,7 +74,7 @@ static NSString * const RJDownloadIndicatorDefaultSuspendtImageName = @"icon_sta
     _diameterPercent = 1.0;
     _animationDuration = 0.2;
     _backgroundCircleStrokeColor = [UIColor colorWithRed:235.0/255.0 green:235.0/255.0 blue:235.0/255.0 alpha:1.0];
-    _foregroundCircleStrokeColor = [UIColor colorWithRed:21.0/255.0 green:146.0/255.0 blue:255.0/255.0 alpha:1.0];
+    _foregroundCircleStrokeColor = [UIColor colorWithRed:36.0/255.0 green:153.0/255.0 blue:255.0/255.0 alpha:1.0];
     self.backgroundColor = [UIColor whiteColor];
     
     [self setupProgressLayer];
@@ -110,8 +110,15 @@ static NSString * const RJDownloadIndicatorDefaultSuspendtImageName = @"icon_sta
 #pragma mark - Target Methods
 
 - (void)tapView:(UITapGestureRecognizer *)gesture {
-    self.state = self.state == RJDownloadIndicatorStateResume ? RJDownloadIndicatorStateSuspend : RJDownloadIndicatorStateResume;
-    [self changeState:self.state];
+    RJDownloadIndicatorState newState = _state == RJDownloadIndicatorStateResume ? RJDownloadIndicatorStateSuspend : RJDownloadIndicatorStateResume;
+    [self changeState:newState];
+    if (self.clickBlock) {
+        self.clickBlock(_state);
+    }
+    
+    if ([self.delegate respondsToSelector:@selector(indicator:didClick:)]) {
+        [self.delegate indicator:self didClick:_state];
+    }
 }
 
 #pragma mark - Public Methods
